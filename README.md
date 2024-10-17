@@ -1,4 +1,4 @@
-# dictionary
+# dictionary-fn
 
 A simple utility function for typesafe translations.
 
@@ -13,7 +13,7 @@ A simple utility function for typesafe translations.
 ## Installation
 
 ```bash
-pnpm install dictionary
+pnpm install dictionary-fn
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ pnpm install dictionary
 ### 1. Instantiate dictionary utils
 
 ```ts
-import { createDictionary } from "dictionary"
+import { createDictionary } from "dictionary-fn"
 
 const { defineDictionary, t } = createDictionary({
   locales: ["en", "it"],
@@ -107,7 +107,7 @@ i18n/
 ```ts
 // i18n/index.ts
 
-import { createDictionary } from "dictionary"
+import { createDictionary } from "dictionary-fn"
 
 export { defineDictionary, t } = createDictionary({
   locales: ["en", "it"],

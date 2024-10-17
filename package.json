@@ -1,5 +1,5 @@
 {
-  "name": "dictionary",
+  "name": "dictionary-fn",
   "version": "1.0.0",
   "description": "A simple utility function for typesafe translations.",
   "license": "MIT",
@@ -14,13 +14,13 @@
     "translation"
   ],
   "author": "Mattia Dalzocchio <mattiadalzocchio@me.com>",
-  "homepage": "https://github.com/mattiaz9/dictionary#readme",
+  "homepage": "https://github.com/mattiaz9/dictionary-fn#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mattiaz9/dictionary.git"
+    "url": "git+https://github.com/mattiaz9/dictionary-fn.git"
   },
   "bugs": {
-    "url": "https://github.com/mattiaz9/dictionary/issues"
+    "url": "https://github.com/mattiaz9/dictionary-fn/issues"
   },
   "module": "./dist/index.js",
   "main": "./dist/index.cjs",
