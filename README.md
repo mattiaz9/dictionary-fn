@@ -109,9 +109,11 @@ i18n/
 
 import { createDictionary } from "dictionary-fn"
 
-export { defineDictionary, t } = createDictionary({
+const { defineDictionary, t } = createDictionary({
   locales: ["en", "it"],
 })
+
+export { defineDictionary, t }
 ```
 
 ```ts
