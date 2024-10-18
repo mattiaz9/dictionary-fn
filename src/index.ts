@@ -54,7 +54,7 @@ export function createDictionary<TLocale extends string>(
     if ("params" in options) {
       return translationValue.replace(
         /{(\w+)}/g,
-        (match, key) => (options.params as Record<string, string>)[key] ?? match
+        (match, key) => (options.params as Record<string, any>)[key] ?? match
       )
     }
 

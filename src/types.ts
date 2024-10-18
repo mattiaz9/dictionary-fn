@@ -49,7 +49,7 @@ type Params<TLocale extends string, TItem extends DictionaryItem<TLocale>> = Has
   TItem
 > extends true
   ? {
-      params: Prettify<{ [key in DictionaryItemValues<TItem>]: string }>
+      params: Prettify<{ [key in DictionaryItemValues<TItem>]: string | number | boolean }>
     }
   : {}
 
