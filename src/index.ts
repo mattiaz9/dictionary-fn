@@ -8,7 +8,7 @@ import {
 } from "./types"
 
 export interface CreateDictionaryDefinerOptions<TLocale extends string> {
-  locales: TLocale[]
+  locales: TLocale[] | readonly TLocale[]
 }
 
 export function createDictionary<TLocale extends string>(
