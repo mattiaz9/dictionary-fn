@@ -39,7 +39,27 @@ const dictionary = defineDictionary({
 })
 ```
 
-### 3. Apply translation
+### 3. Define dictionary with keys
+
+```ts
+const dictionary = defineDictionaryWithKeys(["helloWorld", "helloName"])({
+  helloWorld: {
+    en: "Hello, World!",
+    it: "Ciao, Mondo!"
+  },
+  // ❌ Error: Missing key "helloName"
+})
+
+const dictionary = defineDictionaryWithKeys<"helloWorld" | "helloName">()({
+  helloWorld: {
+    en: "Hello, World!",
+    it: "Ciao, Mondo!"
+  },
+  // ❌ Error: Missing key "helloName"
+})
+```
+
+### 4. Apply translation
 
 ```ts
 const locale = "en"

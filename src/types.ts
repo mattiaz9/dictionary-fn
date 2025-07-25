@@ -1,5 +1,5 @@
-export type Dictionary<TLocale extends string> = {
-  [key: string]: DictionaryItem<TLocale>
+export type Dictionary<TLocale extends string, TKeys extends string = string> = {
+  [key in TKeys]: DictionaryItem<TLocale>
 }
 
 export type DictionaryTranslations<TLocale extends string> = Record<TLocale, string>

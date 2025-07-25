@@ -16,8 +16,16 @@ export function createDictionary<TLocale extends string>(
 ) {
   function defineDictionary<const TDictionary extends Dictionary<TLocale>>(
     dictionary: TDictionary
-  ) {
+  ): TDictionary {
     return dictionary
+  }
+
+  function defineDictionaryWithKeys<const TKeys extends string>(keys?: readonly TKeys[]) {
+    return function <const TDictionary extends Dictionary<TLocale, TKeys>>(
+      dictionary: TDictionary
+    ): TDictionary {
+      return dictionary
+    }
   }
 
   function t<TItem extends DictionaryTranslations<TLocale>>(
@@ -63,6 +71,7 @@ export function createDictionary<TLocale extends string>(
 
   return {
     defineDictionary,
+    defineDictionaryWithKeys,
     t,
   }
 }
