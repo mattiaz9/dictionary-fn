@@ -7,11 +7,11 @@ import {
   TSingularOptions,
 } from "./types"
 
-export interface CreateDictionaryDefinerOptions<TLocale extends string> {
+interface CreateDictionaryDefinerOptions<TLocale extends string> {
   locales: TLocale[] | readonly TLocale[]
 }
 
-export function createDictionary<TLocale extends string>(
+function createDictionary<TLocale extends string>(
   options: CreateDictionaryDefinerOptions<TLocale>
 ) {
   function defineDictionary<const TDictionary extends Dictionary<TLocale>>(
@@ -74,4 +74,15 @@ export function createDictionary<TLocale extends string>(
     defineDictionaryWithKeys,
     t,
   }
+}
+
+export {
+  createDictionary,
+  CreateDictionaryDefinerOptions,
+  Dictionary,
+  DictionaryItem,
+  DictionaryPlurals,
+  DictionaryTranslations,
+  TPluralOptions,
+  TSingularOptions,
 }
